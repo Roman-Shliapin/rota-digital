@@ -7,6 +7,9 @@
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
   background-color: transparent;
+  /* Окремий композитний шар: менше перерахунків blur під час скролу контенту */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .header::before {
@@ -14,9 +17,9 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-color: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   pointer-events: none;
 }
 
@@ -121,9 +124,9 @@
 
 .nav {
   border-top: 1px solid var(--color-border);
-  background: rgba(10, 10, 10, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.35);
   max-height: min(70vh, 420px);
   overflow-x: hidden;

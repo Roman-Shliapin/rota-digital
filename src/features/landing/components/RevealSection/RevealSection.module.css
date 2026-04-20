@@ -4,7 +4,7 @@
   transition:
     opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+  /* Не тримаємо will-change після появи — інакше зайві шари й дрібна «дрож» при скролі */
 }
 
 .visible {
@@ -17,6 +17,5 @@
     opacity: 1;
     transform: none;
     transition: none;
-    will-change: auto;
   }
 }

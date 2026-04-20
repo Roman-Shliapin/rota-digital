@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100svh;
-  min-height: 100dvh;
   padding-top: calc(108px + env(safe-area-inset-top, 0px));
   padding-bottom: max(
     clamp(64px, 10vh, 120px),
